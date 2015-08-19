@@ -1,0 +1,11 @@
+#PBS -N ExoVal.pbs
+#PBS -l walltime=12:00:00
+#PBS -l nodes=4:ppn=16
+#PBS -A txl80_share
+#PBS -j oe
+#PBS -m abe
+#PBS -M wjm78@case.edu
+#PBS -A txl80_share
+
+module load R
+R CMD BATCH ~/EECS459/ExoRCVal.R >~/EECS459/exo.out 2>~/EECS459/exo.err
